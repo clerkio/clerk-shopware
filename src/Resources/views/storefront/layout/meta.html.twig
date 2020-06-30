@@ -1,0 +1,28 @@
+{% sw_extends '@Storefront/storefront/layout/meta.html.twig' %}
+
+{% block layout_head_javascript_tracking %}
+	{{ parent() }}
+	{% if shopware.config.Clerkio.config.enabled == 'true' %}
+		<!-- Start of Clerk.io E-commerce Personalisation tool - www.clerk.io -->
+		<script type="text/javascript">
+		 (function(w,d){
+		  var e=d.createElement('script');e.type='text/javascript';e.async=true;
+		  e.src=(d.location.protocol=='https:'?'https':'http')+'://cdn.clerk.io/clerk.js';
+		  var s=d.getElementsByTagName('script')[0];s.parentNode.insertBefore(e,s);
+		  w.__clerk_q=w.__clerk_q||[];w.Clerk=w.Clerk||function(){w.__clerk_q.push(arguments)};
+		 })(window,document);
+
+		 Clerk('config', {
+		  key: "{{ shopware.config.Clerkio.config.publicKey }}"
+		 });
+		</script>
+		<!-- End of Clerk.io E-commerce Personalisation tool - www.clerk.io -->
+	{% endif %}
+	{% if shopware.config.Clerkio.config.PowerstepRecommendationsEnabled == 'true' %}
+		{% if shopware.config.Clerkio.config.PowerstepRecommendationsType == 'popup' %}
+			<script src="{{ asset('bundles/clerkio/js/powerstep-popup.js') }}"></script>
+		{% else %}
+			<script src="{{ asset('bundles/clerkio/js/powerstep-page.js') }}"></script>
+		{% endif %}
+	{% endif %}
+{% endblock %}

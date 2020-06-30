@@ -1,0 +1,34 @@
+{
+  "name": "clerkio/clerkio",
+  "description": "Clerk.io Shopware 6 Plugin",
+  "type": "shopware-platform-plugin",
+  "version": "v0.7.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Clerk.io"
+    },
+    {
+      "name": "Casper Kromann Nielsen",
+      "email": "ckn@clerk.io"
+    }
+  ],
+  "extra": {
+    "shopware-plugin-class": "CLERKIO\\Clerkio\\Clerkio",
+    "plugin-icon": "src/Resources/config/plugin.png",
+    "copyright": "(c) by Clerk.io",
+    "label": {
+      "de-DE": "Clerk.io",
+      "en-GB": "Clerk.io"
+    },
+    "description": {
+      "de-DE": "Clerk.io",
+      "en-GB": "Clerk.io"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "CLERKIO\\Clerkio\\": "src/"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.clerk_powerstep_continue {
+
+    display: inline-block;
+    float: right;
+    width: 20%;
+
+}
+.clerk_powerstep_close {
+
+    width: 20%;
+    display: inline-block;
+    margin-top: 0!important;
+
+}
+
+#clerk-powerstep {
+
+    display: none;
+
+}
+
+#clerk_powerstep_header_h2 {
+
+    text-align: center;
+
+}
+
+.clerk_powerstep_image {
+
+    text-align: center;
+
+}
+
+#clerk_powerstep_image_img {
+
+    height: 250px;
+
+}
+.clerk-powerstep-page {
+
+    padding: 0 50px;
+
+}

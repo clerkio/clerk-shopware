@@ -1,0 +1,28 @@
+{% sw_extends '@Storefront/storefront/page/search/index.html.twig' %}
+
+{% block base_content %}
+	{% if shopware.config.Clerkio.config.searchPageEnabled == 'true' %}
+		<link href="{{ asset('bundles/clerkio/css/search-page.css') }}" rel="stylesheet">
+		<div class="clerk-search-page-container">
+			<span
+					id="clerk-search"
+					class="clerk"
+					data-template="@{{ shopware.config.Clerkio.config.searchPageContent ? shopware.config.Clerkio.config.searchPageContent : 'search-page' }}"
+					data-limit="40"
+					data-offset="0"
+					data-target="#clerk-search-results"
+					data-query="{{ page.searchTerm }}"
+			{% if shopware.config.Clerkio.config.facetedSearchEnabled == 'true' %}
+					data-facets-target="#clerk-search-filters"
+					data-facets-attributes='["price","categories","brand"]'
+			{% endif %}
+			></span>
+			{% if shopware.config.Clerkio.config.facetedSearchEnabled == 'true' %}
+				<div id="clerk-search-filters"></div>
+			{% endif %}
+			<ul id="clerk-search-results"></ul>
+		</div>
+	{% else %}
+		{{ parent() }}
+	{% endif %}
+{% endblock %}

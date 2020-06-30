@@ -1,0 +1,17 @@
+#exit-intent {
+
+    position: fixed;
+    display: none;
+    top: 10%;
+    z-index: 16777271;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0px 8px 40px 0px rgba(0,0,60,0.15);
+
+}
+
+.clerk-popup-visible {
+    display: block!important;
+}

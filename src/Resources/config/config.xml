@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+    <!--    General Settings    -->
+    <card>
+        <title>General</title>
+        <input-field type="single-select">
+            <name>enabled</name>
+            <label>Status</label>
+            <options>
+                <option>
+                    <id>true</id>
+                    <name>Enabled</name>
+                </option>
+                <option>
+                    <id>false</id>
+                    <name>Disabled</name>
+                </option>
+            </options>
+            <defaultValue>true</defaultValue>
+        </input-field>
+        <input-field type="text">
+            <name>publicKey</name>
+            <label>Public Key</label>
+        </input-field>
+        <input-field type="password">
+            <name>privateKey</name>
+            <label>Private Key</label>
+        </input-field>
+    </card>
+    <!--    Instant Search Settings    -->
+    <card>
+        <title>Instant Search Settings</title>
+        <input-field type="single-select">
+            <name>instantSearchEnabled</name>
+            <label>Status</label>
+            <options>
+                <option>
+                    <id>true</id>
+                    <name>Enabled</name>
+                </option>
+                <option>
+                    <id>false</id>
+                    <name>Disabled</name>
+                </option>
+            </options>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field type="single-select">
+            <name>instantSearchNumberOfSuggestions</name>
+            <label>Number Of Suggestions</label>
+            <options>
+                <option>
+                    <id>0</id>
+                    <name>0</name>
+                </option>
+                <option>
+                    <id>1</id>
+                    <name>1</name>
+                </option>
+                <option>
+                    <id>2</id>
+                    <name>2</name>
+                </option>
+                <option>
+                    <id>3</id>
+                    <name>3</name>
+                </option>
+                <option>
+                    <id>4</id>
+                    <name>4</name>
+                </option>
+                <option>
+                    <id>5</id>
+                    <name>5</name>
+                </option>
+                <option>
+                    <id>6</id>
+                    <name>6</name>
+                </option>
+                <option>
+                    <id>7</id>
+                    <name>7</name>
+                </option>
+                <option>
+                    <id>8</id>
+                    <name>8</name>
+                </option>
+                <option>
+                    <id>9</id>
+                    <name>9</name>
+                </option>
+                <option>
+                    <id>10</id>
+                    <name>10</name>
+                </option>
+            </options>
+            <defaultValue>5</defaultValue>
+        </input-field>
+        <input-field type="single-select">
+            <name>instantSearchNumberOfCategories</name>
+            <label>Number Of Categories</label>
+            <options>
+                <option>
+                    <id>0</id>
+                    <name>0</name>
+                </option>
+                <option>
+                    <id>1</id>
+                    <name>1</name>
+                </option>
+                <option>
+                    <id>2</id>
+                    <name>2</name>
+                </option>
+                <option>
+                    <id>3</id>
+                    <name>3</name>
+                </option>
+                <option>
+                    <id>4</id>
+                    <name>4</name>
+                </option>
+                <option>
+                    <id>5</id>
+                    <name>5</name>
+                </option>
+                <option>
+                    <id>6</id>
+                    <name>6</name>
+                </option>
+                <option>
+                    <id>7</id>
+                    <name>7</name>
+                </option>
+                <option>
+                    <id>8</id>
+                    <name>8</name>
+                </option>
+                <option>
+                    <id>9</id>
+                    <name>9</name>
+                </option>
+                <option>
+                    <id>10</id>
+                    <name>10</name>
+                </option>
+            </options>
+            <defaultValue>5</defaultValue>
+        </input-field>
+        <input-field type="single-select">
+            <name>instantSearchNumberOfPages</name>
+            <label>Number Of Pages</label>
+            <options>
+                <option>
+                    <id>0</id>
+                    <name>0</name>
+                </option>
+                <option>
+                    <id>1</id>
+                    <name>1</name>
+                </option>
+                <option>
+                    <id>2</id>
+                    <name>2</name>
+                </option>
+                <option>
+                    <id>3</id>
+                    <name>3</name>
+                </option>
+                <option>
+                    <id>4</id>
+                    <name>4</name>
+                </option>
+                <option>
+                    <id>5</id>
+                    <name>5</name>
+                </option>
+                <option>
+                    <id>6</id>
+                    <name>6</name>
+                </option>
+                <option>
+                    <id>7</id>
+                    <name>7</name>
+                </option>
+                <option>
+                    <id>8</id>
+                    <name>8</name>
+                </option>
+                <option>
+                    <id>9</id>
+                    <name>9</name>
+                </option>
+                <option>
+                    <id>10</id>
+                    <name>10</name>
+                </option>
+            </options>
+            <defaultValue>5</defaultValue>
+        </input-field>
+        <input-field type="single-select">
+            <name>instantSearchPageTypes</name>
+            <label>Page Types</label>
+            <options>
+                <option>
+                    <id>all</id>
+                    <name>All</name>
+                </option>
+            </options>
+            <defaultValue>all</defaultValue>
+        </input-field>
+        <input-field type="single-select">
+            <name>instantSearchDropdownPositioning</name>
+            <label>Dropdown Positioning</label>
+            <options>
+                <option>
+                    <id>left</id>
+                    <name>Left</name>
+                </option>
+                <option>
+                    <id>center</id>
+                    <name>Center</name>
+                </option>
+                <option>
+                    <id>right</id>
+                    <name>Right</name>
+                </option>
+                <option>
+                    <id>below</id>
+                    <name>Below</name>
+                </option>
+                <option>
+                    <id>off</id>
+                    <name>Off</name>
+                </option>
+            </options>
+            <defaultValue>left</defaultValue>
+        </input-field>
+        <input-field type="text">
+            <name>instantSearchContent</name>
+            <label>Content</label>
+            <defaultValue>live-search</defaultValue>
+        </input-field>
+        <input-field type="text">
+            <name>instantSearchInputSelector</name>
+            <label>Input Selector</label>
+        </input-field>
+        <input-field type="text">
+            <name>instantSearchFormSelector</name>
+            <label>Form Selector</label>
+        </input-field>
+    </card>
+    <!--    Search Page Settings    -->
+    <card>
+        <title>Search Page Settings</title>
+        <input-field type="single-select">
+            <name>searchPageEnabled</name>
+            <label>Status</label>
+            <options>
+                <option>
+                    <id>true</id>
+                    <name>Enabled</name>
+                </option>
+                <option>
+                    <id>false</id>
+                    <name>Disabled</name>
+                </option>
+            </options>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field type="text">
+            <name>searchPageContent</name>
+            <label>Content</label>
+            <defaultValue>search-page</defaultValue>
+        </input-field>
+    </card>
+
+    <!--    Faceted Search Settings    -->
+    <card>
+        <title>Faceted Search Settings</title>
+        <input-field type="single-select">
+            <name>facetedSearchEnabled</name>
+            <label>Status</label>
+            <options>
+                <option>
+                    <id>true</id>
+                    <name>Enabled</name>
+                </option>
+                <option>
+                    <id>false</id>
+                    <name>Disabled</name>
+                </option>
+            </options>
+            <defaultValue>false</defaultValue>
+        </input-field>
+    </card>
+
+    <!--    Products Settings    -->
+    <card>
+        <title>Products Settings</title>
+        <input-field type="single-select">
+            <name>productRecommendationsEnabled</name>
+            <label>Status</label>
+            <options>
+                <option>
+                    <id>true</id>
+                    <name>Enabled</name>
+                </option>
+                <option>
+                    <id>false</id>
+                    <name>Disabled</name>
+                </option>
+            </options>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field type="text">
+            <name>productRecommendationsContent</name>
+            <label>Content</label>
+            <defaultValue>product-page-alternatives,product-page-others-also-bought</defaultValue>
+        </input-field>
+    </card>
+
+    <!--    Category Settings    -->
+    <card>
+        <title>Category Settings</title>
+        <input-field type="single-select">
+            <name>categoryRecommendationsEnabled</name>
+            <label>Status</label>
+            <options>
+                <option>
+                    <id>true</id>
+                    <name>Enabled</name>
+                </option>
+                <option>
+                    <id>false</id>
+                    <name>Disabled</name>
+                </option>
+            </options>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field type="text">
+            <name>categoryRecommendationsContent</name>
+            <label>Content</label>
+            <defaultValue>category-page-popular</defaultValue>
+        </input-field>
+    </card>
+
+    <!--    Cart Settings    -->
+    <card>
+        <title>Cart Settings</title>
+        <input-field type="single-select">
+            <name>cartRecommendationsEnabled</name>
+            <label>Status</label>
+            <options>
+                <option>
+                    <id>true</id>
+                    <name>Enabled</name>
+                </option>
+                <option>
+                    <id>false</id>
+                    <name>Disabled</name>
+                </option>
+            </options>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field type="text">
+            <name>cartRecommendationsContent</name>
+            <label>Content</label>
+            <defaultValue>cart-others-also-bought</defaultValue>
+        </input-field>
+    </card>
+
+    <!--    Exit Intent Settings    -->
+    <card>
+        <title>Exit Intent Settings</title>
+        <input-field type="single-select">
+            <name>exitIntentRecommendationsEnabled</name>
+            <label>Status</label>
+            <options>
+                <option>
+                    <id>true</id>
+                    <name>Enabled</name>
+                </option>
+                <option>
+                    <id>false</id>
+                    <name>Disabled</name>
+                </option>
+            </options>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field type="text">
+            <name>exitIntentRecommendationsContent</name>
+            <label>Content</label>
+            <defaultValue>exit-intent</defaultValue>
+        </input-field>
+    </card>
+
+    <!--    Powerstep Settings    -->
+    <card>
+        <title>Powerstep Settings</title>
+        <input-field type="single-select">
+            <name>PowerstepRecommendationsEnabled</name>
+            <label>Status</label>
+            <options>
+                <option>
+                    <id>true</id>
+                    <name>Enabled</name>
+                </option>
+                <option>
+                    <id>false</id>
+                    <name>Disabled</name>
+                </option>
+            </options>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field type="single-select">
+            <name>PowerstepRecommendationsType</name>
+            <label>Type</label>
+            <options>
+                <option>
+                    <id>page</id>
+                    <name>Page</name>
+                </option>
+                <option>
+                    <id>popup</id>
+                    <name>Popup</name>
+                </option>
+            </options>
+            <defaultValue>popup</defaultValue>
+        </input-field>
+        <input-field type="text">
+            <name>PowerstepRecommendationsContent</name>
+            <label>Content</label>
+            <defaultValue>power-step-others-also-bought, power-step-visitor-complementary, power-step-popular, power-step-popular-on-sale</defaultValue>
+        </input-field>
+    </card>
+</config>

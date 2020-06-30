@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/component/product/listing.html.twig' %}
+{% block product_listing %}
+	{% if shopware.config.Clerkio.config.categoryRecommendationsEnabled == 'true' %}
+		{% set contents = shopware.config.Clerkio.config.categoryRecommendationsContent | split(',') %}
+		{% for content in contents %}
+			<span class="clerk" data-template="@{{ content | replace({' ': ''}) }}" data-category="{{ page.header.navigation.active.id }}"></span>
+		{% endfor %}
+	{% endif %}
+	{{ parent() }}
+{% endblock %}

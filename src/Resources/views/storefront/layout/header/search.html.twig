@@ -1,0 +1,17 @@
+{% sw_extends '@Storefront/storefront/layout/header/search.html.twig' %}
+
+{% block layout_header_search %}
+	{{ parent() }}
+	{% if shopware.config.Clerkio.config.instantSearchEnabled == 'true' %}
+		<span
+				class="clerk"
+				data-template="@{{ shopware.config.Clerkio.config.instantSearchContent }}"
+				data-instant-search-suggestions="{{ shopware.config.Clerkio.config.instantSearchNumberOfSuggestions }}"
+				data-instant-search-categories="{{ shopware.config.Clerkio.config.instantSearchNumberOfCategories }}"
+				data-instant-search-pages="{{ shopware.config.Clerkio.config.instantSearchNumberOfPages }}"
+				data-instant-search-positioning="{{ shopware.config.Clerkio.config.instantSearchDropdownPositioning ? shopware.config.Clerkio.config.instantSearchDropdownPositioning : 'left' }}"
+				data-instant-search="{{ shopware.config.Clerkio.config.instantSearchInputSelector ? shopware.config.Clerkio.config.instantSearchInputSelector : '.header-search-input' }}"
+				data-instant-search-pages-type="{{ shopware.config.Clerkio.config.instantSearchPageTypes ? shopware.config.Clerkio.config.instantSearchPageTypes : 'all' }}">
+		</span>
+	{% endif %}
+{% endblock %}

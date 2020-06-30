@@ -1,0 +1,25 @@
+{% sw_extends '@Storefront/storefront/page/checkout/cart/index.html.twig' %}
+{% block page_checkout_container %}
+	{{ parent() }}
+	{% if shopware.config.Clerkio.config.cartRecommendationsEnabled == 'true' and not page.cart.lineItems.count is same as(0) %}
+		{% set products = "[" %}
+
+		{% for product in page.cart.data.elements %}
+			{% if product.productNumber %}
+				{% set productId = product.parentId ? product.parentId :  product.id %}
+				{% if products == "[" %}
+					{% set products = products ~ '"'~productId~'"' %}
+				{% else %}
+					{% set products = products ~ ',"'~productId~'"' %}
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+
+		{% set products = products ~ "]" %}
+		{% set contents = shopware.config.Clerkio.config.cartRecommendationsContent | split(',') %}
+
+		{% for content in contents %}
+			<span class="clerk" data-template="@{{ content | replace({' ': ''}) }}" data-products="{{ products }}"></span>
+		{% endfor %}
+	{% endif %}
+{% endblock %}

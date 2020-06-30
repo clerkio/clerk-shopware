@@ -1,0 +1,21 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/buy-widget-form.html.twig' %}
+{% block page_product_detail_product_buy_meta %}
+	{{ parent() }}
+	{% if shopware.config.Clerkio.config.PowerstepRecommendationsEnabled == 'true' %}
+		{% if product.cover.media %}
+			{% set image = product.cover.media %}
+			<input type="hidden"
+				   name="product-image"
+				   value="{{ image.url }}">
+		{% endif %}
+		<input type="hidden"
+			   name="product-parentId"
+			   value="{{ product.parentId }}">
+		<input type="hidden"
+			   name="product-id"
+			   value="{{ product.id }}">
+		<input type="hidden"
+			   name="product-category"
+			   value="{{ product.categoryTree | last }}">
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,6 @@
+{% sw_extends '@Storefront/storefront/layout/header/search-suggest.html.twig' %}
+{% block layout_search_suggest %}
+	{% if shopware.config.Clerkio.config.instantSearchEnabled != 'true' %}
+		{{ parent() }}
+	{% endif %}
+{% endblock %}

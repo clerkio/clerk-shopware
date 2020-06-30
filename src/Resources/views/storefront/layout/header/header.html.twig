@@ -1,0 +1,18 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+{% block layout_header %}
+	{{ parent() }}
+	{% if shopware.config.Clerkio.config.exitIntentRecommendationsEnabled == 'true' %}
+		<link href="{{ asset('bundles/clerkio/css/exit-intent.css') }}" rel="stylesheet">
+		{% set contents = shopware.config.Clerkio.config.exitIntentRecommendationsContent | split(',') %}
+		{% for content in contents %}
+			<span class="clerk clerk-popup clerk-popup-hidden container"
+			data-template="@{{ content | replace({ ' ': '' }) }}"
+		  	data-exit-intent="true"></span>
+			<script>
+				Clerk('on', 'rendered', '#exit-intent', function(content, data) {
+					Clerk('ui', 'popup', '#exit-intent', 'show');
+				});
+			</script>
+		{% endfor %}
+	{% endif %}
+{% endblock %}

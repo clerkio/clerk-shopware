@@ -1,0 +1,40 @@
+{% sw_extends '@Storefront/storefront/page/content/index.html.twig' %}
+{% block base_main_inner %}
+	{{ parent() }}
+	{% if shopware.config.Clerkio.config.PowerstepRecommendationsEnabled == 'true' %}
+		{% if shopware.config.Clerkio.config.PowerstepRecommendationsType == 'popup' %}
+			<link href="{{ asset('bundles/clerkio/css/powerstep-popup.css') }}" rel="stylesheet">
+		{% else %}
+			<link href="{{ asset('bundles/clerkio/css/powerstep-page.css') }}" rel="stylesheet">
+		{% endif %}
+		<div id="clerk-powerstep" class="clerk-popup clerk-popup-hidden">
+			{% if shopware.config.Clerkio.config.PowerstepRecommendationsType == 'page' %}
+			<div class="clerk-powerstep-page">
+				{% endif %}
+				<div class="clerk_powerstep_header">
+					<h2 id="clerk_powerstep_header_h2"></h2>
+				</div>
+				<div class="clerk_powerstep_image">
+					<img id="clerk_powerstep_image_img"/>
+				</div>
+				<div class="clerk_powerstep_clear actions">
+					<button class="btn btn-block btn-link clerk_powerstep_close">Continue Shopping</button>
+					<button class="btn btn-block begin-checkout-btn btn-primary clerk_powerstep_continue"
+							onClick="location.href='{{ path('frontend.checkout.cart.page') }}'">Continue to Checkout
+					</button>
+				</div>
+				{% set contents = shopware.config.Clerkio.config.PowerstepRecommendationsContent | split(',') %}
+				{% for content in contents %}
+					<span id="clerk-powerstep-{{ content | replace({ ' ': '' }) }}" class="clerk-powerstep-recommendation"
+						  data-template="@{{content}}"
+						  data-products=""
+						  data-category=""
+					></span>
+				{% endfor %}
+				{% if shopware.config.Clerkio.config.PowerstepRecommendationsType == 'page' %}
+			</div>
+			{% endif %}
+		</div>
+	{% endif %}
+{% endblock %}
+

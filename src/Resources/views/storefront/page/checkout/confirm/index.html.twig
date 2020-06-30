@@ -1,0 +1,26 @@
+{% sw_extends '@Storefront/storefront/page/checkout/confirm/index.html.twig' %}
+{% block page_checkout_main_content %}
+	{{ parent() }}
+	{% set sale = "[" %}
+	{% for lineItem in page.cart.lineItems %}
+		{% set productId = 'None' %}
+		{% for product in page.cart.data.elements %}
+			{% if product.productNumber and product.id == lineItem.id %}
+				{% set productId = product.parentId ? product.parentId :  product.id %}
+			{% endif %}
+		{% endfor %}
+		{% if productId != 'None' %}
+			{% if sale == "[" %}
+				{% set sale = sale ~ "{" %}
+			{% else %}
+				{% set sale = sale ~ ",{" %}
+			{% endif %}
+
+			{% set sale = sale ~ '"id":"'~ productId ~ '","price":' ~  lineItem.price.unitPrice ~ ',"quantity":' ~ lineItem.quantity %}
+
+			{% set sale = sale ~ "}" %}
+		{% endif %}
+	{% endfor %}
+	{% set sale = sale ~ "]" %}
+	{{ app.session.set('clerk_sale', sale) }}
+{% endblock %}

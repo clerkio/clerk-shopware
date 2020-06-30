@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/page/checkout/finish/index.html.twig' %}
+{% block page_checkout_main_content %}
+	{{ parent() }}
+	<span class="clerk"
+		data-api="log/sale"
+		data-sale="{{ page.order.orderNumber }}"
+		data-email="{{ page.order.orderCustomer.email }}"
+		data-products='{{ app.session.get('clerk_sale') }}'>
+	</span>
+{% endblock %}
