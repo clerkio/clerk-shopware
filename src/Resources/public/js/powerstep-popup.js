@@ -34,7 +34,10 @@ window.onload = function() {
 
             popup.show();
             $(".offcanvas").toggle();
-            setTimeout(function(){ $(".modal-backdrop").toggle(); }, 100);
+            setTimeout(function(){
+                $(".modal-backdrop").toggle();
+                $('html').removeClass('no-scroll');
+            }, 100);
         });
 
         $(".clerk_powerstep_close").click(function () {

@@ -26,7 +26,7 @@
 					{% set contents = shopware.config.Clerkio.config.PowerstepRecommendationsContent | split(',') %}
 					{% for content in contents %}
 						<span id="clerk-powerstep-{{ content | replace({ ' ': '' }) }}" class="clerk-powerstep-recommendation"
-							  data-template="@{{content}}"
+							  data-template="@{{ content | replace({ ' ': '' }) }}"
 							  data-products=""
 							  data-category=""
 						></span>

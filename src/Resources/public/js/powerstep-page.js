@@ -38,7 +38,11 @@ window.onload = function() {
 
             page.css("display","contents");
             $(".offcanvas").toggle();
-            setTimeout(function(){ $(".modal-backdrop").toggle(); }, 100);
+            setTimeout(function(){
+                $(".modal-backdrop").toggle();
+                $('html').removeClass('no-scroll');
+            }, 100);
+
 
         });
 
