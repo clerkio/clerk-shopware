@@ -15,6 +15,12 @@
 			{% if shopware.config.Clerkio.config.facetedSearchEnabled == 'true' %}
 					data-facets-target="#clerk-search-filters"
 					data-facets-attributes='["price","categories","brand"]'
+					data-facets-design="{{shopware.config.Clerkio.config.facetedSearchDesign}}"
+			{% endif %}
+			{% if shopware.config.Clerkio.config.SearchCategoriesEnabled == 'true' %}
+					data-search-categories="{{shopware.config.Clerkio.config.SearchNumberOfCategories}}"
+					data-search-pages="{{shopware.config.Clerkio.config.SearchNumberOfPages}}"
+					date-search-pages-types="{{shopware.config.Clerkio.config.SearchPageTypes}}"
 			{% endif %}
 			></span>
 			{% if shopware.config.Clerkio.config.facetedSearchEnabled == 'true' %}

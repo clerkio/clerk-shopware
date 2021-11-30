@@ -269,6 +269,134 @@
             </options>
             <defaultValue>false</defaultValue>
         </input-field>
+        <input-field type="single-select">
+            <name>SearchCategoriesEnabled</name>
+            <label>Include Categories</label>
+            <options>
+                <option>
+                    <id>true</id>
+                    <name>Enabled</name>
+                </option>
+                <option>
+                    <id>false</id>
+                    <name>Disabled</name>
+                </option>
+            </options>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field type="single-select">
+            <name>SearchNumberOfCategories</name>
+            <label>Number Of Categories</label>
+            <options>
+                <option>
+                    <id>0</id>
+                    <name>0</name>
+                </option>
+                <option>
+                    <id>1</id>
+                    <name>1</name>
+                </option>
+                <option>
+                    <id>2</id>
+                    <name>2</name>
+                </option>
+                <option>
+                    <id>3</id>
+                    <name>3</name>
+                </option>
+                <option>
+                    <id>4</id>
+                    <name>4</name>
+                </option>
+                <option>
+                    <id>5</id>
+                    <name>5</name>
+                </option>
+                <option>
+                    <id>6</id>
+                    <name>6</name>
+                </option>
+                <option>
+                    <id>7</id>
+                    <name>7</name>
+                </option>
+                <option>
+                    <id>8</id>
+                    <name>8</name>
+                </option>
+                <option>
+                    <id>9</id>
+                    <name>9</name>
+                </option>
+                <option>
+                    <id>10</id>
+                    <name>10</name>
+                </option>
+            </options>
+            <defaultValue>5</defaultValue>
+        </input-field>
+        <input-field type="single-select">
+            <name>SearchNumberOfPages</name>
+            <label>Number Of Pages</label>
+            <options>
+                <option>
+                    <id>0</id>
+                    <name>0</name>
+                </option>
+                <option>
+                    <id>1</id>
+                    <name>1</name>
+                </option>
+                <option>
+                    <id>2</id>
+                    <name>2</name>
+                </option>
+                <option>
+                    <id>3</id>
+                    <name>3</name>
+                </option>
+                <option>
+                    <id>4</id>
+                    <name>4</name>
+                </option>
+                <option>
+                    <id>5</id>
+                    <name>5</name>
+                </option>
+                <option>
+                    <id>6</id>
+                    <name>6</name>
+                </option>
+                <option>
+                    <id>7</id>
+                    <name>7</name>
+                </option>
+                <option>
+                    <id>8</id>
+                    <name>8</name>
+                </option>
+                <option>
+                    <id>9</id>
+                    <name>9</name>
+                </option>
+                <option>
+                    <id>10</id>
+                    <name>10</name>
+                </option>
+            </options>
+            <defaultValue>5</defaultValue>
+        </input-field>
+        <input-field type="single-select">
+            <name>SearchPageTypes</name>
+            <label>Page Types</label>
+            <options>
+                <option>
+                    <id>all</id>
+                    <name>All</name>
+                </option>
+            </options>
+            <defaultValue>all</defaultValue>
+        </input-field>
         <input-field type="text">
             <name>searchPageContent</name>
             <label>Content</label>
@@ -293,6 +421,11 @@
                 </option>
             </options>
             <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field type="text">
+            <name>facetedSearchDesign</name>
+            <label>Design</label>
+            <defaultValue></defaultValue>
         </input-field>
     </card>
 
